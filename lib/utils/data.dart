@@ -38,17 +38,17 @@ List<String> albumImages = [
 
 List<ModelHotel> modelHotel = [
   ModelHotel("\$210",  "Superior Room", "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60","Single Room",
-      "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document"),
+      "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document",albumImages),
   ModelHotel("\$150",  "Junior Suite", "https://images.unsplash.com/photo-1505692952047-1a78307da8f2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-      ,"Siem Reap","Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document"),
+      ,"Siem Reap","Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document",albumImages),
   ModelHotel("\$320",  "Classic Queen Room", "https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-      ,"Single Room", "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document"),
+      ,"Single Room", "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document",albumImages),
   ModelHotel("\$350",  "Luxury King", "https://images.unsplash.com/photo-1571508601891-ca5e7a713859?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      "Single Room","Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document"),
+      "Single Room","Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document",albumImages),
   ModelHotel("\$180",  "Classic Room", "https://images.unsplash.com/photo-1541123356219-284ebe98ae3b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      "Single Room","Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document"),
+      "Single Room","Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document",albumImages),
   ModelHotel("\$250",  "Twin Room",  "https://images.unsplash.com/photo-1566195992011-5f6b21e539aa?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-      "Single Room","Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document")
+      "Single Room","Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document",albumImages)
 ];
 List features = [
   {

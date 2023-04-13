@@ -1,5 +1,7 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:hotel_booking/utils/ModelHotel.dart';
+import 'package:hotel_booking/utils/data.dart';
 import 'package:hotel_booking/widgets/recommend_item.dart';
 
 import '../theme/color.dart';
@@ -31,12 +33,7 @@ class DetailItem extends StatelessWidget {
             Container(
               height: MediaQuery.of(context).size.height,
               alignment: Alignment.topCenter,
-              child: Image.network(
-                modelHotel.image,
-                height: 2*MediaQuery.of(context).size.height/5,
-                width: MediaQuery.of(context).size.width,
-                fit: BoxFit.fill,
-              ),
+              child: getSliderImage()
             ),
              Positioned.fill(
               top: 230,
@@ -262,49 +259,6 @@ class DetailItem extends StatelessWidget {
     ));
   }
 
- /* get111() {
-    print("image:"+modelHotel.image);
-    return GestureDetector(
-      child: Container(
-        width: 50,
-        // height: height,
-        padding: EdgeInsets.all(10),
-        margin: EdgeInsets.only(bottom: 5, top: 5),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
-          boxShadow: [
-            BoxShadow(
-              color: shadowColor.withOpacity(0.1),
-              spreadRadius: 1,
-              blurRadius: 1,
-              offset: Offset(1, 1), // changes position of shadow
-            ),
-          ],
-        ),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomImage(
-              modelHotel.image,
-              width: 50,
-              height: 50,
-              radius: 15,
-            ),
-            *//* Container(
-                width: MediaQuery.of(context).size.width,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-
-                  ],
-                ))*//*
-          ],
-        ),
-      ),
-    );
-  }*/
-
   getOffer() {
     return SingleChildScrollView(
       padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
@@ -344,4 +298,18 @@ class DetailItem extends StatelessWidget {
       ),
     );
   }
+
+  getSliderImage(){
+    return CarouselSlider(
+      options: CarouselOptions(height: 300.0),
+        items: List.generate(
+          albumImages.length,
+              (index) =>Image.network(
+                modelHotel.album[index],
+                fit: BoxFit.fill,
+              )
+        )
+    );
+  }
+  
 }
