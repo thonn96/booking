@@ -1,10 +1,12 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:hotel_booking/utils/ModelBooking.dart';
 import 'package:hotel_booking/utils/ModelHotel.dart';
 import 'package:hotel_booking/utils/data.dart';
 import 'package:hotel_booking/widgets/recommend_item.dart';
 
 import '../theme/color.dart';
+import 'booking_screen.dart';
 import 'custom_image.dart';
 
 class DetailItem extends StatelessWidget {
@@ -230,14 +232,21 @@ class DetailItem extends StatelessWidget {
                                           child: IconButton(
                                             icon: const Icon(Icons.call),
                                             color: Colors.white,
-                                            onPressed: () {},
+                                            onPressed: () {
+                                            },
                                           ),
                                         ),
                                       ),
                                     ),
                                     TextButton(
                                       style: flatButtonStyle,
-                                      onPressed: () { },
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (_) => BookingScreen(modelBooking: new ModelBooking(modelHotel.price, modelHotel.name, modelHotel.image, modelHotel.type, modelHotel.description, albumImages),modelBookingList: [],) ),
+                                        );
+                                      },
                                       child: Text('Booking now',style: TextStyle(
                                         color: Colors.white,
                                       )),
