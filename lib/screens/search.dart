@@ -1,5 +1,7 @@
 import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
 import 'package:hotel_booking/widgets/search_item.dart';
 
@@ -36,6 +38,7 @@ class Search extends StatefulWidget {
 
 class _Search extends State<Search> {
   List<ModelHotel> modelHotel1 = List.from(modelHotel);
+  final ref = FirebaseDatabase.instance.ref("json");
   @override
   Widget build(BuildContext context) {
     List barItems = [
@@ -92,6 +95,7 @@ class _Search extends State<Search> {
                     shrinkWrap: true,
                     itemCount: modelHotel1.length,
                     itemBuilder: (context, index) {
+
                       return SearchItem(
                         modelHotel: modelHotel1[index],
                         //data: features[index],
@@ -99,14 +103,31 @@ class _Search extends State<Search> {
                       );
                     }),
               ),
-            )
+            ),
+          /*  Expanded(child: FirebaseAnimatedList(query: ref,itemBuilder: (context, DataSnapshot snapshot,
+            Animation<double> animation, int x){
+              print("###"+ snapshot.value.toString());
+              return new Text(snapshot.value.toString());
+            }) )*/
           ],
         ),
       ),
     );
   }
 
-  void update(String text){
+  Future<void> update(String text) async {
+    try {
+      DatabaseEvent event = await ref.once();
+      print("### update:"+event.snapshot.value.toString());
+      FirebaseAnimatedList(query:ref,itemBuilder: (context, DataSnapshot snapshot,
+          Animation<double> animation, int x){
+        print("### aaaaaa"+ snapshot.value.toString());
+        return new Text(snapshot.value.toString());
+      });
+    } on Exception catch (_) {
+      print('never reached');
+    }
+
     setState(() {
       modelHotel1 = modelHotel.where((element) => element.name.contains(text)).toList();
     });

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "108151436964",
+    "firebase_url": "https://bookingapp-d26fd-default-rtdb.firebaseio.com",
+    "project_id": "bookingapp-d26fd",
+    "storage_bucket": "bookingapp-d26fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108151436964:android:c6335586c0623639535831",
+        "android_client_info": {
+          "package_name": "com.thonn.hotel_booking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108151436964-ch3bgvst57trbo6dk8h01l7lmifkilik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9pn0KLJ4RaUADASWAWkoHqSkJ2FQAH2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108151436964-ch3bgvst57trbo6dk8h01l7lmifkilik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sangvaleap.hotel_booking">
+    package="com.thonn.hotel_booking">
    <application
         android:label="hotel_booking"
         android:icon="@mipmap/ic_launcher">

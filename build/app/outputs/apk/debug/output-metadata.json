@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.sangvaleap.hotel_booking",
+  "applicationId": "com.thonn.hotel_booking",
   "variantName": "debug",
   "elements": [
     {
